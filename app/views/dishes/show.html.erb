@@ -53,13 +53,9 @@
   </div>
 </div>
 
-
-
-<p>
-      <% @bookmarks.each do |bookmark| %>
-        <a href="/venues/<%= Venue.find(bookmark.venue_id).id %>">
+<p>      <% @bookmarks.each do |bookmark| %>
+        <div><a href="/venues/<%= Venue.find(bookmark.venue_id).id %>"></div>
         <%= Venue.find(bookmark.venue_id).name %></a>
+        
       <% end %>
 </p>
-
-
